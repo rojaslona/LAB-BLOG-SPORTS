@@ -38,11 +38,31 @@ body {
     height: 60px;
 }
 
-.logo h1 {
-    color: #dc3545;
-    font-size: 1.8rem;
-    font-weight: bold;
+
+.logo {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    padding-left: 20px;        
 }
+
+
+.logo img {
+    height: clamp(100px, 8vw, 90px); 
+    width: auto;
+    object-fit: contain;
+
+    filter: drop-shadow(0 3px 6px rgba(0,0,0,.4));
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,.5));
+}
+
+
 
 .nav-menu {
     display: flex;
